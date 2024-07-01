@@ -41,7 +41,7 @@ public void loginTest() throws InterruptedException, IOException
 	 Thread.sleep(1000);
 	 driver.findElement(By.xpath("//button[text()='Add Bulk Orders']")).click();
 	 driver.findElement(By.id("mui-7")).sendKeys("C:\\Users\\Admin\\3D Objects\\demo-data.xlsx");
-	 Thread.sleep(2000);
+	 Thread.sleep(1000);
 	 driver.findElement(By.xpath("//button[text()='Import']")).click();
 	 Thread.sleep(2000);
 	 
@@ -57,7 +57,7 @@ public void loginTest() throws InterruptedException, IOException
 		jse.executeScript("arguments[0].scrollIntoView()",ele);
 		
 		File f = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		Files.copy(f, new File("C:\\Users\\Admin\\3D Objects\\screenshot\\scrshot1.png"));
+		Files.copy(f, new File("C:\\Users\\Admin\\3D Objects\\screenshot\\scrsht1.png"));
 		
 		
 		JavascriptExecutor jse2 = (JavascriptExecutor)driver;
@@ -65,7 +65,7 @@ public void loginTest() throws InterruptedException, IOException
 		jse2.executeScript("arguments[0].scrollIntoView()",ele2);
 			
 		File f2 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		Files.copy(f2, new File("C:\\Users\\Admin\\3D Objects\\screenshot\\scrshot3.png"));
+		Files.copy(f2, new File("C:\\Users\\Admin\\3D Objects\\screenshot\\scrsht3.png"));
 		
 		Thread.sleep(2000); 
 		driver.close();
